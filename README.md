@@ -231,16 +231,12 @@ __Cada uno de los controles de un formulario debe tener el atributo name, con el
 
 |Tag| |Descripcion| |Atributos comunes|
 |-----|:------------:|--------------------------------------------:|
-|< form>|
-|Se utiliza para crear formularios que permiten al usuario crear datos|
-| Action: define la URL donde se enviaran los datos||method: especifica el metodo de envio de datos| |target: Indica como se debe mostrar la respuesta al enviar el formulario|
+|< form>||Se utiliza para crear formularios que permiten al usuario crear datos|| Action: define la URL donde se enviaran los datos method: especifica el metodo de envio de datos target: Indica como se debe mostrar la respuesta al enviar el formulario|
 
 #### Etiquetas de formularios (Input)
 |Tag| |Descripcion| |Atributos comunes|
 |-----|:------------:|--------------------------------------------:|
-|< input>|
-|Se utiliza para crear diferentes tipos de campos interactivos|
-| Type: define el tipo de entrada que se debe mostrar| |id: identificador unico para el campo| |name: Nombre del campo de entrada| |Value: Valor predeterminado del campo de entrada| | Placeholder: Texto que aparece en el campo cuando esta vacio.| | required: Indica que el campo debe completarse antes de enviar el formulario| | disabled: Desactivar el campo, evitando que el usuario interactue con el.| | readonly: Hace que el campo sea solo de lectura. |
+|< input>||Se utiliza para crear diferentes tipos de campos interactivos|| Type: define el tipo de entrada que se debe mostrar id: identificador unico para el campo name: Nombre del campo de entrada Value: Valor predeterminado del campo de entrada Placeholder: Texto que aparece en el campo cuando esta vacio.required: Indica que el campo debe completarse antes de enviar el formulario disabled: Desactivar el campo, evitando que el usuario interactue con el. readonly: Hace que el campo sea solo de lectura.|
 
 
 

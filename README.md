@@ -1,7 +1,17 @@
 # Midocumentacion_IzanNaranjo
 ## Git hub
 
+En git hub debemos saber como crear un repositorio, para ello entraremos en el propio github y le daremos a crear nuevo repositorio.
 
+Una vez creado el repositorio lo deberemos clonar para que lo podamos utilizar, para hacer esto lo que haremos sera ir a la carpeta donde guardemos nuestros repositorios y abrir el cmd. Una vez abierto lo que haremos sera poner __git clone__ seguidamente de la URL del repositorio que se encuentra en Code dentro del repositorio.
+
+Ahora vamos a hablar sobre los comandos de github:
+
+1. __git init__ Esto lo que hace es que iniciemos el github en nuestra carpeta del repositorio
+2. __git branch__ Lo que hace es ver la rama en la que estas trabajando, por ejemplo main
+3. __git add .__ La funcion que hace es guardar la nueva informacion 
+4. __git commit -m (texto)__ Se usa para guardar los cambios realizados en el repositorio local y luego la opcion -m permite agregar un mensaje de commit directamente desde el cmd, describiendo brevemente lo que se ha cambiado.
+5. __git push origin__ Su funcion es  trasladar lo que hemos guardado previamente hacia nuestro repositorio de github para que podamos visualizar lo que hemos echo dentro de github
 
 ## Markdown
 
@@ -48,7 +58,6 @@ Lo unico que tendremos que hacer sera utilizar cualquier link como lo es en mi c
 
 #### Puesto en practica el link
 
-[TextoClicable](URL "Titulo opcional")
 [Pagina web de jesuites Bellvitge](https://www.fje.edu/ca/fje "Titulo opcional")
 
 

@@ -229,15 +229,14 @@ __Cada uno de los controles de un formulario debe tener el atributo name, con el
 
 #### Etiquetas de formularios 
 
-|Tag| |Descripcion| |Atributos comunes|
-|-----|:------------:|--------------------------------------------:|
-|< form>||Se utiliza para crear formularios que permiten al usuario crear datos|| Action: define la URL donde se enviaran los datos method: especifica el metodo de envio de datos target: Indica como se debe mostrar la respuesta al enviar el formulario|
+| **Tag**   | **Descripcion**                                                                            | **Atributos comunes**                                                                                               |
+|-----------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `<form>`  | Se utiliza para crear formularios que permiten al usuario crear datos.                     | `action`: define la URL donde se enviaran los datos. <br> `method`: especifica el metodo de envio de datos. <br> `target`: indica como se debe mostrar la respuesta al enviar el formulario. |
 
 #### Etiquetas de formularios (Input)
-|Tag| |Descripcion| |Atributos comunes|
-|-----|:------------:|--------------------------------------------:|
-|< input>||Se utiliza para crear diferentes tipos de campos interactivos|| Type: define el tipo de entrada que se debe mostrar id: identificador unico para el campo name: Nombre del campo de entrada Value: Valor predeterminado del campo de entrada Placeholder: Texto que aparece en el campo cuando esta vacio.required: Indica que el campo debe completarse antes de enviar el formulario disabled: Desactivar el campo, evitando que el usuario interactue con el. readonly: Hace que el campo sea solo de lectura.|
-
+| **Tag**   | **Descripcion**                                                                            | **Atributos comunes**                                                                                               |
+|-----------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `<input>` | Se utiliza para crear diferentes tipos de campos interactivos.                             | `type`: define el tipo de entrada que se debe mostrar. <br> `id`: identificador unico para el campo. <br> `name`: nombre del campo de entrada. <br> `value`: valor predeterminado del campo de entrada. <br> `placeholder`: texto que aparece en el campo cuando esta vacio. <br> `required`: indica que el campo debe completarse antes de enviar el formulario. <br> `disabled`: desactiva el campo, evitando que el usuario interactue con el. <br> `readonly`: hace que el campo sea solo de lectura. |
 
 
 

@@ -420,3 +420,256 @@ Los pseudoelementos permiten aplicar estilos a partes específicas de un element
        font-weight: bold;
    }
 
+## FLEXBOX
+
+### Introducción
+
+**Flexbox** Flexbox (o "Modelo de Caja Flexible") es una herramienta de diseño en CSS pensada para organizar elementos dentro de un contenedor de manera más ágil y dinámica. Su principal ventaja es que se adapta fácilmente a distintos tamaños de pantalla, lo que lo convierte en una excelente opción para construir interfaces modernas y responsivas.
+
+Antes de que existiera Flexbox, los desarrolladores web solían apoyarse en métodos como float o inline-block, que requerían más esfuerzo y trucos para lograr diseños complejos. Con Flexbox, todo ese proceso se vuelve mucho más sencillo, ya que ofrece un sistema claro para controlar la alineación, el espacio entre elementos y su distribución en el contenedor.
+
+---
+
+### Conceptos clave
+
+1. **Contenedor:**  
+   Es el elemento padre que contiene los elementos flexibles. Para activar Flexbox, se utiliza la propiedad `display: flex;`.
+
+2. **Ítems:**  
+   Son los elementos hijos directos del contenedor. Estos se alinean y distribuyen según las propiedades definidas en el contenedor.
+
+3. **Eje principal:**  
+   Es la dirección principal en la que se distribuyen los ítems. Por defecto, es horizontal (de izquierda a derecha).
+
+4. **Eje secundario:**  
+   Es perpendicular al eje principal. Si el eje principal es horizontal, el eje secundario será vertical.
+
+---
+
+### Propiedades del contenedor
+
+El contenedor Flexbox tiene varias propiedades que controlan cómo se distribuyen y alinean los ítems:
+
+1. **`display: flex;`**  
+   Activa el modelo Flexbox en el contenedor.
+
+2. **`flex-direction`**  
+   Define la dirección del eje principal.  
+   Valores:
+   - `row` (por defecto): Los ítems se alinean en una fila horizontal.
+   - `row-reverse`: Los ítems se alinean en una fila horizontal, pero en orden inverso.
+   - `column`: Los ítems se alinean en una columna vertical.
+   - `column-reverse`: Los ítems se alinean en una columna vertical, pero en orden inverso.
+
+   ```css
+   .contenedor {
+       display: flex;
+       flex-direction: row;
+   }
+   ```
+
+   3. __`justify-content`__
+Controla la alineación de los ítems a lo largo del eje principal.
+Valores:
+
+__`flex-start` (por defecto):__ Los ítems se alinean al inicio.
+__`flex-end`:__ Los ítems se alinean al final.
+__`center`:__ Los ítems se centran.
+__`space-between`:__ Espacio igual entre los ítems.
+__`space-around`:__ Espacio igual alrededor de los ítems.
+
+.contenedor {
+    justify-content: center;
+}
+
+4. __`align-items`__
+Controla la alineación de los ítems a lo largo del eje secundario.
+Valores:
+
+__`stretch` (por defecto):__ Los ítems se estiran para llenar el contenedor.
+__`flex-start`:__ Los ítems se alinean al inicio.
+__`flex-end`:__ Los ítems se alinean al final.
+__`center`:__ Los ítems se centran.
+
+.contenedor {
+    align-items: flex-start;
+}
+
+5. __`flex-wrap`__
+Define si los ítems deben ajustarse a una nueva línea cuando no caben en el contenedor.
+Valores:
+
+__`nowrap` (por defecto):__ Los ítems no se ajustan.
+__`wrap`:__ Los ítems se ajustan a una nueva línea.
+__`wrap-reverse`:__ Los ítems se ajustan a una nueva línea en orden inverso.
+
+.contenedor {
+    flex-wrap: wrap;
+}
+
+6. __`align-content`__
+Controla la alineación de las líneas cuando hay múltiples filas o columnas.
+Valores:
+
+__`stretch` (por defecto):__ Las líneas se estiran para llenar el espacio.
+__`flex-start`:__ Las líneas se alinean al inicio.
+__`flex-end`:__ Las líneas se alinean al final.
+__`center`:__ Las líneas se centran.
+__`space-between`:__ Espacio igual entre las líneas.
+__`space-around`:__ Espacio igual alrededor de las líneas.
+
+.contenedor {
+    align-content: space-between;
+}
+
+### Propiedades de los ítems
+Los ítems dentro de un contenedor Flexbox también tienen propiedades específicas:
+
+1. __`order`__
+Cambia el orden de los ítems. Por defecto, todos los ítems tienen un valor de 0.
+
+.item {
+    order: 1;
+}
+
+2. __`flex-grow`__
+Define cuánto puede crecer un ítem en relación con los demás.
+
+.item {
+    flex-grow: 2;
+}
+
+3. __`flex-shrink`__
+Define cuánto puede reducirse un ítem en relación con los demás.
+
+.item {
+    flex-shrink: 1;
+}
+
+4. __`flex-basis`__
+Define el tamaño inicial de un ítem antes de que se distribuya el espacio restante.
+
+.item {
+    flex-basis: 100px;
+}
+
+5. __`align-self`__
+Permite alinear un ítem de manera diferente al resto.
+Valores:
+
+__`auto` (por defecto):__ Hereda el valor de align-items.
+__`flex-start`:__ Se alinea al inicio.
+__`flex-end`:__ Se alinea al final.
+__`center`:__ Se centra.
+__`stretch`:__ Se estira.
+
+.item {
+    align-self: center;
+}
+
+Ejemplo práctico de Flexbox
+
+A continuación, un ejemplo de cómo usar Flexbox para crear un diseño simple:
+
+<div class="contenedor">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: lightgray;
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+## RESPONSIVE DESIGN
+
+### Introducción
+
+**Responsive Design** es una estrategia que permite que un sitio web se transforme visualmente según el dispositivo desde el que se accede. En lugar de crear versiones distintas para cada pantalla, se utiliza un solo diseño capaz de reorganizar y redimensionar los elementos para adaptarse a cualquier resolución. Esto garantiza que la web se vea bien y funcione correctamente tanto en una pantalla grande como en una pequeña, sin necesidad de hacer zoom o desplazarse en exceso.
+
+---
+
+### Características principales
+
+1. **Flexibilidad y adaptabilidad:**  
+   Los componentes del sitio, como el texto, las imágenes o los menús, se reorganizan y redimensionan de forma automática según el espacio disponible en la pantalla del dispositivo.
+
+2. **Media Queries:**  
+   Permiten aplicar estilos específicos según las características del dispositivo, como el ancho o la orientación de la pantalla.
+
+3. **Rejillas fluidas:**  
+   Utilizan porcentajes en lugar de valores fijos para definir el tamaño de los elementos, lo que facilita la adaptación a diferentes resoluciones.
+
+4. **Imágenes y fuentes escalables:**  
+   Garantizan que las imágenes y el texto mantengan su proporción y legibilidad en cualquier tamaño de pantalla.
+
+---
+
+### ¿Qué son las Media Queries?
+
+Las __Media Queries__ en CSS permiten modificar los estilos dependiendo de las características del dispositivo o del tamaño de la ventana del navegador. Con ellas, es posible adaptar el diseño en función de aspectos como el ancho, alto, orientación de la pantalla o su resolución.
+
+**Ventajas de las Media Queries:**
+- Permiten personalizar el diseño para diferentes dispositivos.
+- Mejoran la experiencia del usuario al adaptar el contenido automáticamente.
+- Reducen la necesidad de crear múltiples versiones de una misma página.
+
+**Desventajas de las Media Queries:**
+- Pueden aumentar la complejidad del código CSS, especialmente en proyectos grandes.
+- Requieren pruebas exhaustivas en diferentes dispositivos y navegadores para garantizar la compatibilidad.
+- Si no se implementan correctamente, pueden generar inconsistencias en el diseño.
+- Dependiendo del diseño, pueden aumentar el tiempo de carga al incluir múltiples estilos en un solo archivo CSS.
+
+---
+
+### Funcionamiento
+
+Las Media Queries detectan las características del dispositivo y aplican los estilos definidos si se cumplen las condiciones especificadas.
+
+**Sintaxis básica:**
+```css
+@media (condición) {
+    /* Estilos aplicados si se cumple la condición */
+}
+```
+
+**Ejemplos de uso de `@media` en diferentes dispositivos:**
+
+1. **Pantallas grandes (escritorio):**
+   ```css
+   @media (min-width: 1024px) {
+       body {
+           background-color: lightblue;
+       }
+   }
+
+2. __Móviles__:
+
+    ```css
+    @media (max-width: 480px) {
+    body {
+        background-color: lightyellow;
+    }
+    }
+3. __tablets__:
+
+ ```css
+ 
+@media (max-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+}

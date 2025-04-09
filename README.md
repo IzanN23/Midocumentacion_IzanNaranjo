@@ -1,4 +1,17 @@
 # Midocumentacion_IzanNaranjo
+
+## Índice
+- [GitHub](#github)
+- [Markdown](#markdown)
+- [HTML](#html)
+- [CSS](#css)
+- [Flexbox](#flexbox)
+- [Responsive Design](#responsive-design)
+- [XML](#xml)
+
+---
+
+
 ## Git hub
 
 En git hub debemos saber como crear un repositorio, para ello entraremos en el propio github y le daremos a crear nuevo repositorio.
@@ -239,8 +252,171 @@ __Cada uno de los controles de un formulario debe tener el atributo name, con el
 | `<input>` | Se utiliza para crear diferentes tipos de campos interactivos.                             | `type`: define el tipo de entrada que se debe mostrar. <br> `id`: identificador unico para el campo. <br> `name`: nombre del campo de entrada. <br> `value`: valor predeterminado del campo de entrada. <br> `placeholder`: texto que aparece en el campo cuando esta vacio. <br> `required`: indica que el campo debe completarse antes de enviar el formulario. <br> `disabled`: desactiva el campo, evitando que el usuario interactue con el. <br> `readonly`: hace que el campo sea solo de lectura. |
 
 
+## CSS
 
+### ¿Qué es CSS?
+CSS, que significa **Hojas de Estilo en Cascada** (Cascading Style Sheets), es un lenguaje que se utiliza para definir el diseño visual de las páginas web. Su principal objetivo es separar el contenido estructurado en HTML de su presentación, facilitando así el mantenimiento y la personalización del diseño.
 
+---
 
+### Evolución y propósito
+Antes de la llegada de CSS, el diseño y la estructura de las páginas web se gestionaban directamente en HTML, lo que hacía que el código fuera más complicado y difícil de mantener. CSS se introdujo para solucionar este problema, permitiendo aplicar estilos de manera más eficiente y sin alterar el contenido.
 
+---
+
+### Ventajas y desventajas
+
+**Ventajas:**
+- Mejora la experiencia del usuario al permitir diseños más atractivos y dinámicos.
+- Facilita la implementación de diseños responsivos para adaptarse a diferentes dispositivos.
+- Reduce el tamaño del archivo HTML al separar el contenido del diseño.
+- Permite la personalización rápida de estilos mediante el uso de variables CSS.
+- Ofrece soporte para animaciones y transiciones, mejorando la interactividad.
+
+**Desventajas:**
+- Puede ser complicado de dominar cuando se trabaja con diseños complejos.
+- La compatibilidad con navegadores antiguos puede requerir soluciones adicionales.
+- Los errores en las hojas de estilo pueden ser difíciles de depurar.
+- La cascada y la especificidad pueden generar conflictos entre reglas de estilo.
+- Requiere un conocimiento avanzado para aprovechar al máximo sus capacidades.
+
+---
+
+### Formas de incluir CSS
+
+1. **CSS en línea (inline):** Se aplica directamente en la etiqueta HTML mediante el atributo `style`.
+   ```html 
+
+   <-p style="color: green; text-align: center;">Texto centrado y verde<-/p>
+
+2. __CSS interno:__ Se escribe dentro de la etiqueta ``<style>`` en la sección ``<head>`` del documento HTML.
+   
+<head>
+    <style>
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+1. __CSS externo:__ Se guarda en un archivo separado con extensión .css y se enlaza al documento HTML mediante la etiqueta ``<link>``
+
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+### Prioridad en CSS
+
+Cuando se aplican varios estilos a un mismo elemento, CSS sigue un orden de prioridad:
+
+1. __Estilos en línea:__ Tienen la mayor prioridad.
+2. **Estilos internos:** Se aplican si no hay estilos en línea.
+3. __Estilos externos:__ Se aplican si no hay estilos internos ni en línea.
+4. __Herencia:__ Algunos estilos se heredan de los elementos padres.
+5. __Regla !important:__ Sobrescribe cualquier otro estilo, independientemente de su origen.
+
+### Sintaxis CSS
+
+CSS consta de:
+
+__Selector:__ Indica a qué elementos se aplicará el estilo.
+
+__Propiedades y valores:__ Definen el estilo que se aplicará.
+
+Ejemplo:
+
+p {
+    color: red;
+    font-size: 14px;
+}
+
+__Comentarios:__ Se utilizan para añadir notas en el código que no serán interpretadas por el navegador.
+
+/* Hola me llamo Izan N */
+
+__Agrupación de selectores:__ Permite aplicar el mismo estilo a varios elementos.
+
+h1, p {
+    color: blue;
+}
+
+### Tipos de selectores
+
+1. __Selector de elementos:__ Aplica estilos a todas las etiquetas de un tipo específico.
+
+h1 {
+    color: green;
+}
+
+2. __Selector de clase:__ Aplica estilos a elementos con una clase específica.
+
+.titulo {
+    font-weight: bold;
+}
+
+3. __Selector de ID:__ Aplica estilos a un elemento único identificado por un ID.
+
+#principal {
+    background-color: yellow;
+}
+
+### Selectores avanzados
+
+1. __Selectores universales:__ Aplica un estilo a todos los elementos del documento.
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+2. __Selector de atributos:__ Aplica estilos a elementos que contienen un atributo específico.
+
+input[type="text"] {
+    border: 1px solid black;
+}
+
+3. __Selector de hijos directos:__ Aplica estilos a los hijos inmediatos de un elemento.
+
+div > p {
+    color: red;
+}
+
+4. __Selector de descendientes:__ Aplica estilos a todos los elementos descendientes de un contenedor.
+
+div p {
+    font-size: 12px;
+}
+
+5. __Selector de hermanos adyacentes:__ Aplica estilos al elemento que sigue inmediatamente a otro.
+
+h1 + p {
+    margin-top: 10px;
+}
+
+6. __Pseudoclases:__
+
+Las pseudoclases permiten aplicar estilos a elementos en un estado específico.
+
+a:hover 
+{
+    color: green;
+}
+
+### Pseudoelementos
+
+Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento sin necesidad de modificar el contenido HTML. Se identifican con dos puntos dobles `::` seguidos del nombre del pseudoelemento.
+
+---
+
+#### Ejemplos de pseudoelementos:
+
+1. **`::first-letter`**  
+   Aplica estilos a la primera letra de un elemento.
+
+   p::first-letter {
+       font-size: 200%;
+       color: blue;
+       font-weight: bold;
+   }
 

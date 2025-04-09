@@ -1,13 +1,13 @@
 # Midocumentacion_IzanNaranjo
 
 ## Índice
-- [GitHub](#github)
-- [Markdown](#markdown)
-- [HTML](#html)
-- [CSS](#css)
-- [Flexbox](#flexbox)
-- [Responsive Design](#responsive-design)
-- [XML](#xml)
+- [GitHub](#git-hub-volver-al-índice)
+- [Markdown](#markdown-volver-al-índice)
+- [HTML](#html-volver-al-índice)
+- [CSS](#css-volver-al-índice)
+- [Flexbox](#flexbox-volver-al-índice)
+- [Responsive Design](#responsive-design-volver-al-índice)
+- [XML](#xml-volver-al-índice)
 
 ---
 

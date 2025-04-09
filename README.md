@@ -12,7 +12,7 @@
 ---
 
 
-## Git hub
+## Git hub [Volver al índice](#índice)
 
 En git hub debemos saber como crear un repositorio, para ello entraremos en el propio github y le daremos a crear nuevo repositorio.
 
@@ -28,7 +28,7 @@ Ahora vamos a hablar sobre los comandos de github:
 
 Tambien tenemos el github pages que sirve para que nos genere un enlace para ver nuestra pagina web creada con HTML.
 
-## Markdown
+## Markdown [Volver al índice](#índice)
 
 Las Etiquetas en __*markdown*__ y HTML pueden anidarse 
 
@@ -100,7 +100,7 @@ Para crear una tabla es tan facil como separar los titulos con | y abajo de cada
 |Daw1 |Curso 2425|32|
 
 
-## HTML
+## HTML [Volver al índice](#índice)
 
 ### Introduccion HTML
 - HTML (HyperText Markup Language) es el lenguaje de marcado estandar para crear paginas web. Ademas, es Lenguaje mas importante de Internet dado que sin HTML no se veria nada en el navegador.
@@ -251,8 +251,100 @@ __Cada uno de los controles de un formulario debe tener el atributo name, con el
 |-----------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | `<input>` | Se utiliza para crear diferentes tipos de campos interactivos.                             | `type`: define el tipo de entrada que se debe mostrar. <br> `id`: identificador unico para el campo. <br> `name`: nombre del campo de entrada. <br> `value`: valor predeterminado del campo de entrada. <br> `placeholder`: texto que aparece en el campo cuando esta vacio. <br> `required`: indica que el campo debe completarse antes de enviar el formulario. <br> `disabled`: desactiva el campo, evitando que el usuario interactue con el. <br> `readonly`: hace que el campo sea solo de lectura. |
 
+### Campos de selección
 
-## CSS
+Para pedir al usuario que seleccione una opción de un conjunto predefinido, se pueden usar los siguientes elementos:
+
+1. __Botones de opcion (`radio`):__ Permiten seleccionar solo una opción de un grupo.
+
+<fieldset>
+    <legend>Idioma</legend>
+    <input type="radio" id="castellano" name="idioma" value="castellano">
+    <label for="castellano">Castellano</label>
+    <input type="radio" id="catalan" name="idioma" value="catalan">
+    <label for="catalan">Catalán</label>
+    <input type="radio" id="chino" name="idioma" value="chino">
+    <label for="chino">Chino</label>
+</fieldset>
+
+2. __Listas desplegables (`<select>`):__ Permiten al usuario elegir una opción de una lista desplegable.
+
+<form>
+    <label for="ciudad">Ciudad:</label>
+    <select id="ciudad" name="ciudad">
+        <option value="" disabled selected>Seleccione una ciudad</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Valencia">Valencia</option>
+        <option value="Sevilla">Sevilla</option>
+        <option value="Murcia">Murcia</option>
+    </select>
+</form>
+
+### Botones en formularios
+
+Los botones permiten realizar acciones dentro del formulario, como enviar los datos o restablecer los campos.
+
+1. __Botón de envío (submit):__
+Envía los datos del formulario al servidor.
+
+<button type="submit">Enviar datos</button>
+
+2. __Boton de restablecer (`reset`):__ Restablece los campos del formulario a sus valores iniciales.
+
+<button type="reset">Restablecer</button>
+
+### Tablas en HTML
+
+Las tablas se utilizan para organizar datos en filas y columnas. A continuación, se describen las principales etiquetas y atributos:
+
+1. Estructura basica de una tabla: 
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Juan</td>
+            <td>25</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>30</td>
+            <td>Barcelona</td>
+        </tr>
+    </tbody>
+</table>
+
+2. __Atributos comunes:__ 
+    `border`: Define el grosor del borde de la tabla.
+    `width`: Especifica el ancho de la tabla.
+    `colspan`: Permite que una celda ocupe varias columnas.
+    `rowspan`: Permite que una celda ocupe varias filas.
+
+3. __Ejemplo con `colspan` y `rowspan`:__
+
+<table border="1">
+    <tr>
+        <th colspan="2">Encabezado</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Celda 1</td>
+        <td>Celda 2</td>
+    </tr>
+    <tr>
+        <td>Celda 3</td>
+    </tr>
+</table>
+
+
+## CSS [Volver al índice](#índice)
 
 ### ¿Qué es CSS?
 CSS, que significa **Hojas de Estilo en Cascada** (Cascading Style Sheets), es un lenguaje que se utiliza para definir el diseño visual de las páginas web. Su principal objetivo es separar el contenido estructurado en HTML de su presentación, facilitando así el mantenimiento y la personalización del diseño.
@@ -420,7 +512,7 @@ Los pseudoelementos permiten aplicar estilos a partes específicas de un element
        font-weight: bold;
    }
 
-## FLEXBOX
+## FLEXBOX [Volver al índice](#índice)
 
 ### Introducción
 
@@ -594,7 +686,7 @@ A continuación, un ejemplo de cómo usar Flexbox para crear un diseño simple:
     line-height: 50px;
 }
 
-## RESPONSIVE DESIGN
+## RESPONSIVE DESIGN [Volver al índice](#índice)
 
 ### Introducción
 
@@ -667,9 +759,86 @@ Las Media Queries detectan las características del dispositivo y aplican los es
 3. __tablets__:
 
  ```css
- 
+
 @media (max-width: 768px) {
     body {
         background-color: lightgreen;
     }
 }
+```
+
+## XML [Volver al índice](#índice)
+
+### Introducción
+
+**¿Qué es XML?**
+
+__XML (eXtensible Markup Language)__ es un lenguaje de marcado creado para representar y transferir información de forma estructurada. A diferencia de **HTML**, su propósito no es la presentación visual de los datos, sino definir su contenido y organización.
+
+Gracias a su formato claro y comprensible, tanto por personas como por sistemas informáticos, XML se ha convertido en una solución muy útil para el intercambio de datos entre diferentes tecnologías, aplicaciones y lenguajes de programación.
+
+---
+
+### Características principales
+
+1. **Extensible:**  
+   Permite crear tus propias etiquetas personalizadas según las necesidades de los datos que deseas almacenar.
+
+2. **Estructurado:**  
+   Organiza los datos en una jerarquía de nodos (padres e hijos), lo que facilita su comprensión y manipulación.
+
+3. **Legible:**  
+   Es fácil de leer tanto para humanos como para máquinas, gracias a su formato claro y bien definido.
+
+4. **Compatible:**  
+   Se puede usar con una amplia variedad de lenguajes de programación, como **Java**, **Python**, **PHP**, **C#**, entre otros.
+
+5. **Independiente de la plataforma:**  
+   Los archivos XML pueden ser utilizados en cualquier sistema operativo o entorno de desarrollo.
+
+6. **Validación:**  
+   XML permite validar la estructura y el contenido de los datos mediante **DTD (Document Type Definition)** o **XSD (XML Schema Definition)**.
+
+---
+
+### Ventajas de XML
+
+- **Interoperabilidad:** Facilita el intercambio de datos entre diferentes sistemas y aplicaciones.
+- **Estandarización:** Sigue estándares definidos por el **W3C (World Wide Web Consortium)**.
+- **Escalabilidad:** Es adecuado tanto para pequeños archivos de datos como para grandes sistemas de información.
+- **Flexibilidad:** Permite representar cualquier tipo de datos, desde configuraciones simples hasta estructuras complejas.
+- **Legibilidad:** Su formato es fácil de entender y depurar.
+
+---
+
+### Desventajas de XML
+
+- **Verbosidad:** Los archivos XML pueden ser más grandes que otros formatos como **JSON**, debido a la cantidad de etiquetas necesarias.
+- **Rendimiento:** Procesar archivos XML puede ser más lento en comparación con otros formatos más ligeros.
+- **Curva de aprendizaje:** Aunque es fácil de entender, aprender a usar herramientas avanzadas como **XSLT** o **XPath** puede ser complicado.
+- **No es eficiente para datos binarios:** Aunque se puede usar para datos binarios, no es su propósito principal y puede no ser óptimo.
+
+---
+
+### Estructura básica de un archivo XML
+
+Un archivo XML tiene una estructura jerárquica que comienza con una declaración y contiene elementos anidados.
+
+**Ejemplo básico:**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro>
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <año>1605</año>
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <año>1949</año>
+    </libro>
+</libros>
+```
+
+
